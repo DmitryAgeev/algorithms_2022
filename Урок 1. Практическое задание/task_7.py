@@ -14,6 +14,7 @@
 --код с нуля писать не нужно, требуется доработать пример с урока
 """
 
+
 class DequeClass:
     def __init__(self):
         self.elems = []
@@ -52,5 +53,6 @@ def pal_checker(string):
             still_equal = False
 
     return still_equal
+
 
 print(pal_checker('молоко делили ледоколом'))
