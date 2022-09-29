@@ -17,3 +17,16 @@
 Введите число: 123
 Количество четных и нечетных цифр в числе равно: (1, 2)
 """
+
+
+def digit_counter(num: int, even=0, odd=0):
+    if num == 0:
+        return f'The number of even and odd digits in a number is equal to: ({even}, {odd})'
+    elif num % 2 == 1:
+        return digit_counter(num // 10, even, odd + 1)
+    else:
+        return digit_counter(num // 10, even + 1, odd)
+
+
+int_num = int(input(f'Enter a natural number: '))
+print(digit_counter(int_num))

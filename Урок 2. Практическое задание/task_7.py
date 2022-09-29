@@ -13,3 +13,15 @@
 
 Решите через рекурсию. В задании нельзя применять циклы.
 """
+
+
+def get_sum_of_set(base):
+    return base if base == 1 else base + get_sum_of_set(base - 1)
+
+
+try:
+    numb = int(input('Введите число: '))
+    if get_sum_of_set(numb) == numb * (numb + 1) / 2:
+        print('Равенство верно')
+except ValueError:
+    print('Вместо числа введена строка!')

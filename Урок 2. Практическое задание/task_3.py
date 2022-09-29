@@ -18,3 +18,17 @@
 Не забудьте проверить на числе, которое оканчивается на 0.
 1230 -> 0321
 """
+
+
+def number_flipper(num):
+    # if num == 0:
+    #     return ''
+    # else:
+    #     revers = str(num % 10)
+    #     num //= 10
+    #     return revers + number_flipper(num)
+    return str(num) if num < 10 else str(num % 10) + number_flipper(num // 10)
+
+
+some_number = int(input(f'Enter the number: '))
+print(number_flipper(some_number))
